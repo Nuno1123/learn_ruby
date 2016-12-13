@@ -22,3 +22,30 @@ def multiply num1, num2, *rest
   end
   num1 * num2 * rest_num
 end
+
+def power num1, num2
+  result = 0
+  if num2 == 0
+    result = 1
+  elsif num2 == 1
+    result = num1
+  else
+    counter = 2
+    result = num1
+    while counter <= num2 do
+      result = result*num1
+      counter +=1
+    end
+  end
+  return result
+end
+
+def factorial num1
+  result = num1
+  counter = num1
+  while counter > 1 do
+    result = result*(counter-1)
+    counter -= 1
+  end
+  return result
+end
